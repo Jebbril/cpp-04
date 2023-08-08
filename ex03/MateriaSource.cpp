@@ -6,7 +6,7 @@
 /*   By: orakib <orakib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 17:44:45 by orakib            #+#    #+#             */
-/*   Updated: 2023/08/07 18:17:23 by orakib           ###   ########.fr       */
+/*   Updated: 2023/08/08 15:35:18 by orakib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ AMateria	*MateriaSource::createMateria(std::string const &type) {
 	int	i = 0;
 
 	while (i < 4) {
-		if (type == this->types[i])
+		if (type == this->types[i] && type != "")
 			return (this->inv[i]->clone());
 		i++;
 	}
